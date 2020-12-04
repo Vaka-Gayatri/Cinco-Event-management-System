@@ -20,7 +20,6 @@ import { NewconnectionComponent } from './newconnection/newconnection.component'
 import { RegisterComponent } from './register/register.component';
 import { SeatSelectionComponent } from './seat-selection/seat-selection.component';
 import { LogoutComponent } from './logout/logout.component';
-import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DatePipe } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -40,7 +39,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RegisterComponent,
     SeatSelectionComponent,
     LogoutComponent,
-    AboutComponent,
     ContactComponent,
   ],
   imports: [

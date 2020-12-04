@@ -1,20 +1,7 @@
 <div class="container">
+  <h1>All Events</h1>
   <ng-container *ngFor = "let category of allConnections | keyvalue">
-    <h1 class="disply-6" > {{ category.key }} </h1>
-    <!-- <p class="lead">Here are some of the {{ category.key }} events happening in uptown Charlotte sometime soon.</p>
-    <ul class="custom-list">
-        <li *ngFor = "let connection of category.value"><h6> {{ connection._Name }} | ({{ connection._Topic}}) <a href="/connection/{{ connection._ConId }}" class="badge badge-custom">Register Now</a></h6></li>
-    </ul> -->
-    <!-- <div class="row" *ngFor = "let event of category.value">
-      <div class="col-sm-4">
-       <div class="card" style="width: 18rem;">
-         <div class="card-body">
-           <h5 class="card-title">{{ event._Name }}</h5>
-           <p class="card-text"> {{ event._Topic}}</p>
-         </div>
-       </div>
-      </div>
-    </div> -->
+    <h4 class="disply-6" > {{ category.key }} </h4>
     <div class="row">
       <div class="col-sm-4" *ngFor = "let event of category.value">
         <div class="card" style="width: 18rem;">
