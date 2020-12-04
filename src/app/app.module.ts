@@ -22,6 +22,8 @@ import { SeatSelectionComponent } from './seat-selection/seat-selection.componen
 import { LogoutComponent } from './logout/logout.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { DatePipe } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -46,11 +48,13 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    StorageServiceModule
+    StorageServiceModule,
+    NgbModule
   ],
   providers: [
     DataService,
-    UserService
+    UserService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

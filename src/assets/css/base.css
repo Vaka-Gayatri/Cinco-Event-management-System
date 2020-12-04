@@ -171,3 +171,12 @@ Custom Jumbotron
   bottom: 8px;
   right: 16px;
 }
+
+.addEvent {
+  float: right;
+  font-size: 20px;
+  background-color: white;
+  color: #4E4E50;
+  padding: 10px;
+  border-radius: 5%
+}

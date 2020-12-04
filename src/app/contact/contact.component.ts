@@ -9,8 +9,9 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   contactForm = new FormGroup({
-    Username: new FormControl(''),
-    Password: new FormControl(''),
+    who: new FormControl(''),
+    email: new FormControl(''),
+    what: new FormControl('')
   });
 
   constructor() { }

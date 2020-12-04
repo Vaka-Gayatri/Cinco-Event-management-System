@@ -64,4 +64,7 @@ export class SavedconnectionsComponent implements OnInit {
     });
   }
 
+  navigateToAddEvent(){
+    this.router.navigate(['/newconnection]']);
+  }
 }

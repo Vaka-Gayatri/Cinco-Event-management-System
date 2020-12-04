@@ -1,10 +1,39 @@
 <div class="container">
   <ng-container *ngFor = "let category of allConnections | keyvalue">
     <h1 class="disply-6" > {{ category.key }} </h1>
-    <p class="lead">Here are some of the {{ category.key }} events happening in uptown Charlotte sometime soon.</p>
+    <!-- <p class="lead">Here are some of the {{ category.key }} events happening in uptown Charlotte sometime soon.</p>
     <ul class="custom-list">
         <li *ngFor = "let connection of category.value"><h6> {{ connection._Name }} | ({{ connection._Topic}}) <a href="/connection/{{ connection._ConId }}" class="badge badge-custom">Register Now</a></h6></li>
-    </ul>
-    <br>
+    </ul> -->
+    <!-- <div class="row" *ngFor = "let event of category.value">
+      <div class="col-sm-4">
+       <div class="card" style="width: 18rem;">
+         <div class="card-body">
+           <h5 class="card-title">{{ event._Name }}</h5>
+           <p class="card-text"> {{ event._Topic}}</p>
+         </div>
+       </div>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-sm-4" *ngFor = "let event of category.value">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ event._Name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">CreatedBy | {{ event._CreatedBy }}</h6>
+            <p class="card-text">{{ event._Topic }}</p>
+            <a href="#" class="card-link">{{ event._DateTime | date}}</a>
+            <a href="/connection/{{ event._ConId }}"  *ngIf="event._DateTime > currentDate" class="card-link badge badge-custom">Register Now</a>
+            <a href="/connection/{{ event._ConId }}"  *ngIf="event._DateTime < currentDate" class="card-link badge badge-danger">Closed</a>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+
+
+    </div>
+
+
   </ng-container>
 </div>

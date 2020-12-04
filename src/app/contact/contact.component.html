@@ -1,5 +1,16 @@
 <div class="container">
   <h2> Contact Page </h2>
+  <hr class="my-4">
+  <p class="text-justify">
+    Cinco Event Management is a website to track events happening in Charlotte, North Carolina. You can visit our events page to checkout more events happening nearby and decide if you want to join your friends at that event. Checkout the Events page to Browse available events.
+  </p>
+  <br>
+  For other info you can contact us at <strong>admin@cinco.com</strong> or use our <strong>Contact form below.</strong>
+</div>
+
+<div class="push"></div>
+
+<div class="container">
   <form id="contact_form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <label for="who"> Your Name:</label>
      <input id="who" type="text" class="form-control" placeholder="Enter Name" formControlName="who" required>
