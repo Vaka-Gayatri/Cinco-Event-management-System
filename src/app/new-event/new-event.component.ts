@@ -5,11 +5,12 @@ import {UserService} from '../services/user.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-newconnection',
-  templateUrl: './newconnection.component.html',
-  styleUrls: ['./newconnection.component.css']
+  selector: 'app-new-event',
+  templateUrl: './new-event.component.html',
+  styleUrls: ['./new-event.component.css']
 })
-export class NewconnectionComponent implements OnInit {
+export class NewEventComponent implements OnInit {
+
   allowedCategories: string[];
 
   NewConnectionForm = new FormGroup({
@@ -38,5 +39,4 @@ export class NewconnectionComponent implements OnInit {
       }
     });
   }
-
 }

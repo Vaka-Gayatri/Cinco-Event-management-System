@@ -10,8 +10,8 @@
             <h6 class="card-subtitle mb-2 text-muted">CreatedBy | {{ event._CreatedBy }}</h6>
             <p class="card-text">{{ event._Topic }}</p>
             <a href="#" class="card-link">{{ event._DateTime | date}}</a>
-            <a href="/connection/{{ event._ConId }}"  *ngIf="event._DateTime > currentDate" class="card-link badge badge-custom">Register Now</a>
-            <a href="/connection/{{ event._ConId }}"  *ngIf="event._DateTime < currentDate" class="card-link badge badge-danger">Closed</a>
+            <a href="/event-registration/{{ event._ConId }}"  *ngIf="event._DateTime > currentDate" class="card-link badge badge-custom">Register Now</a>
+            <a href="/event-registration/{{ event._ConId }}"  *ngIf="event._DateTime < currentDate" class="card-link badge badge-danger">Closed</a>
           </div>
         </div>
         <br>
@@ -24,3 +24,4 @@
 
   </ng-container>
 </div>
+

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewconnectionComponent } from './newconnection.component';
+import { SavedEventsComponent } from './saved-events.component';
 
-describe('NewconnectionComponent', () => {
-  let component: NewconnectionComponent;
-  let fixture: ComponentFixture<NewconnectionComponent>;
+describe('SavedEventsComponent', () => {
+  let component: SavedEventsComponent;
+  let fixture: ComponentFixture<SavedEventsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewconnectionComponent ]
+      declarations: [ SavedEventsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewconnectionComponent);
+    fixture = TestBed.createComponent(SavedEventsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

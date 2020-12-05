@@ -15,10 +15,10 @@
           <a class="nav-link"  href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li>
-          <a  class="nav-link" href="/connections">Events<span class="sr-only">(current)</span></a>
+          <a  class="nav-link" *ngIf="isLoggedIn" href="/events">Events<span class="sr-only">(current)</span></a>
         </li>
         <li>
-          <a class="nav-link" *ngIf="isLoggedIn" href="/savedconnections"> MyEvents <span class="sr-only">(current)</span></a>
+          <a class="nav-link" *ngIf="isLoggedIn" href="/saved-events"> MyEvents <span class="sr-only">(current)</span></a>
         </li>
         <li>
           <a class="nav-link" *ngIf="isLoggedIn" href="/logout"> Logout </a>

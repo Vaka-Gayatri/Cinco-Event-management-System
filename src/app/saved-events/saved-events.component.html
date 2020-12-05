@@ -1,7 +1,7 @@
 <div class="container">
   <div>
 
-  <a  class="addEvent" href="/newconnection">Add Event</a>
+  <a  class="addEvent" href="/new-event">Add Event</a>
   </div>
 	<div class="Error">
 			<span *ngIf="feedback" class="alert alert-info"> {{ feedback }} </span>
@@ -25,18 +25,10 @@
 
             <div class="card-body">
               <h5 class="card-title">{{ registeredEvent.ConnectionObject.Name }}</h5>
-              <!-- <h6 class="card-subtitle mb-2">{{ registeredEvent.ConnectionObject.Category }}</h6> -->
               <i class="fa fa-check" *ngIf= "registeredEvent.RSVP == 'Yes'"  style="color:green; float:right"></i>
               <i class="fa fa-times" *ngIf= "registeredEvent.RSVP == 'No'" style="color:red; float:right"></i>
               <i class="fa fa-circle" *ngIf= "registeredEvent.RSVP == 'Maybe'" style="color:orange; float:right"></i>
               <p class="card-text"> {{ registeredEvent.ConnectionObject.CreatedBy }}</p>
-              <!-- <form style="max-width: 60px; display: contents;" [formGroup]="seatSelectionForm">
-                <select type="text" id="Category" class="form-control" placeholder="Category" formControlName="Category" required>
-                  <ng-container *ngFor='let category of allowedTier'>
-                    <option value="{{ registeredEvent.Seat }}"  >{{ category }}</option>
-                  </ng-container>
-                </select>
-              </form> -->
               <br>
               <form style="max-width: 60px; display: contents;" [formGroup]="updateConnectionForm" (ngSubmit)="onSubmitUpdate(registeredEvent.ConnectionObject.ConId)">
                 <button style="margin-right: 10px;" type="submit" class="btn btn-sm btn-light" [disabled]="!updateConnectionForm.valid">
@@ -49,9 +41,6 @@
                 </button>
 
               </form>
-              <!-- <button (click)="onSubmitSeat(registeredEvent)" style="margin-right: 10px;" type="submit" class="btn btn-sm btn-light" [disabled]="!seatSelectionForm.valid">
-                <i class="fa fa-chair" style="color:#C3073F;"></i>
-              </button> -->
 
             </div>
           </div>

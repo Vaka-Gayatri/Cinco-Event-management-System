@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.userService.getUserDetails().length > 0) {
-      this.router.navigate(['/savedconnections']);
+      this.router.navigate(['/saved-events']);
     }
   }
 
@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     this.dataService.createUser(this.registerForm.value).subscribe((data: any) => {
       if (Object.keys(data).length > 0 ){
         this.userService.storeOnLocalStorage([JSON.stringify(data.User), 'true', JSON.stringify(data.Profile)]);
-        this.router.navigate(['/savedconnections']);
+        this.router.navigate(['/saved-events']);
       }
     });
   }

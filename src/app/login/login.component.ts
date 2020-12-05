@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.userService.getUserDetails().length > 0){
-      this.router.navigate(['/savedconnections']);
+      this.router.navigate(['/saved-events']);
     }
   }
 
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     this.dataService.userAuth(this.loginForm.value).subscribe((data: any)  => {
       if (Object.keys(data).length > 0 ){
         this.userService.storeOnLocalStorage([JSON.stringify(data.User), 'true', JSON.stringify(data.Profile)]);
-        this.router.navigate(['/savedconnections']);
+        this.router.navigate(['/saved-events']);
       }
     });
   }

@@ -5,11 +5,11 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {UserService} from '../services/user.service';
 
 @Component({
-  selector: 'app-connection',
-  templateUrl: './connection.component.html',
-  styleUrls: ['./connection.component.css']
+  selector: 'app-event-registration',
+  templateUrl: './event-registration.component.html',
+  styleUrls: ['./event-registration.component.css']
 })
-export class ConnectionComponent implements OnInit {
+export class EventRegistrationComponent implements OnInit {
   ConnectionId: string;
   ConnectionObject: any;
 
@@ -31,11 +31,12 @@ export class ConnectionComponent implements OnInit {
     if (this.userService.getUserDetails().length > 0) {
       this.dataService.addRSVP(ConnectionId, Going).subscribe((data: any) => {
         this.userService.storeOnLocalStorage([this.userService.getUserDetails()[0], 'true', JSON.stringify(data.Profile)]);
-        this.router.navigate(['/savedconnections']);
+        this.router.navigate(['/saved-events']);
       });
     } else {
       this.router.navigate(['/login']);
     }
   }
+
 
 }

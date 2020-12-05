@@ -5,12 +5,13 @@ import {UserService} from '../services/user.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 
+
 @Component({
-  selector: 'app-savedconnections',
-  templateUrl: './savedconnections.component.html',
-  styleUrls: ['./savedconnections.component.css']
+  selector: 'app-saved-events',
+  templateUrl: './saved-events.component.html',
+  styleUrls: ['./saved-events.component.css']
 })
-export class SavedconnectionsComponent implements OnInit {
+export class SavedEventsComponent implements OnInit {
   UserConnections: any;
   UserProfile: any;
   feedback: string;
@@ -47,7 +48,7 @@ export class SavedconnectionsComponent implements OnInit {
   }
 
   onSubmitUpdate(ConId) {
-    this.router.navigate(['/connection/' + ConId]);
+    this.router.navigate(['/event-registration/' + ConId]);
   }
 
   onSubmitDelete(ConId) {
@@ -65,6 +66,7 @@ export class SavedconnectionsComponent implements OnInit {
   }
 
   navigateToAddEvent(){
-    this.router.navigate(['/newconnection]']);
+    this.router.navigate(['/new-event]']);
   }
+
 }
